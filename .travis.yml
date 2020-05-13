@@ -6,4 +6,4 @@ jdk: openjdk8
 install: true
 
 script:
-  - mvn -f com.examples.myCIproject/pom.xml clean verify
+  - mvn -f myCIproject/pom.xml clean verify
