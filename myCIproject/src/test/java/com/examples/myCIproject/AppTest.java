@@ -1,6 +1,6 @@
 package com.examples.myCIproject;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.*;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -19,6 +19,11 @@ public class AppTest {
     @Test
 	public void testSayHello() {
 		assertEquals("Hello", app.sayHello());
+	}
+    
+    @Test
+	public void testSayHelloWithName() {
+		assertEquals("Hello World", app.sayHello("World"));
 	}
     
 }
