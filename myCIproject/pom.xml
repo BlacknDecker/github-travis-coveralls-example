@@ -9,7 +9,6 @@
   <version>0.0.1-SNAPSHOT</version>
 
   <name>myCIproject</name>
-  <url>https://github.com/BlacknDecker/github-travis-coveralls-example</url>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
