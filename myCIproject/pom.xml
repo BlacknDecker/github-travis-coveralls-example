@@ -9,8 +9,7 @@
   <version>0.0.1-SNAPSHOT</version>
 
   <name>myCIproject</name>
-  <!-- FIXME change it to the project's website -->
-  <url>http://www.example.com</url>
+  <url>https://github.com/BlacknDecker/github-travis-coveralls-example</url>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -69,7 +68,39 @@
           <artifactId>maven-project-info-reports-plugin</artifactId>
           <version>3.0.0</version>
         </plugin>
+        <!-- JACOCO -->
+        <plugin>
+        	<groupId>org.jacoco</groupId>
+        	<artifactId>jacoco-maven-plugin</artifactId>
+        	<version>0.8.5</version>
+        	<executions>
+        		<execution>
+        			<goals>
+        				<!-- binds by default to the phase "initialize" -->
+        				<goal>prepare-agent</goal>
+        				<!-- binds by default to the phase "verify" -->
+        				<goal>report</goal>        			
+        			</goals>
+        		</execution>
+        	</executions>
+        </plugin>
       </plugins>
     </pluginManagement>
   </build>
+  
+  <profiles>
+    <profile>
+      <id>jacoco</id>
+      <build>
+        <plugins>
+          <plugin>
+            <!-- configured in pluginManagement -->
+            <groupId>org.jacoco</groupId>
+            <artifactId>jacoco-maven-plugin</artifactId>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+  </profiles>
+  
 </project>
