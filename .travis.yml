@@ -20,4 +20,4 @@ cache:
     - $HOME/.m2
 
 script:
-  - mvn -f myCIproject/pom.xml clean verify -Pjacoco
+  - mvn -f myCIproject/pom.xml clean verify -Pjacoco coveralls:report
